@@ -1,0 +1,22 @@
+﻿<Window x:Class="UIWindowSystemsDemo.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="WaveEngine WPF sample" Height="600" Width="1024">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition MaxWidth="300" />
+        </Grid.ColumnDefinitions>
+        <ContentControl x:Name="WaveContainer" Focusable="False" />
+        <StackPanel Grid.Column="1" Margin="12">
+            <TextBlock Text="WaveEngine WPF integration sample."  FontWeight="Bold" Margin="0,0,0,12"/>
+            <TextBlock Text="You can move the scene's camera using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the camera to its initial position and orientation." TextWrapping="Wrap" />
+            <Button Content="Reset camera" HorizontalAlignment="Left" Padding="12,3" Margin="0,12" Click="ResetCameraClick" />
+            <TextBlock Text="Radio rotation:" />
+            <Slider ValueChanged="RadioRotationChanged" Minimum="0" Maximum="360" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="2" />
+        </StackPanel>
+    </Grid>
+</Window>

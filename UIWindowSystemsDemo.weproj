@@ -1,0 +1,26 @@
+Profiles:
+  - AdditionalEffectTechniqueCombinations: null
+    AlphaCompressionFormat: BC3_UNorm
+    CompileEffects: false
+    GraphicsBackend: DirectX11
+    LauncherType: Default
+    Name: Windows
+    NonAlphaCompressionFormat: BC3_UNorm
+    Platform: Windows
+  - AdditionalEffectTechniqueCombinations: null
+    AlphaCompressionFormat: BC3_UNorm
+    CompileEffects: false
+    GraphicsBackend: DirectX11
+    LauncherType: WPF
+    Name: WPF
+    NonAlphaCompressionFormat: BC3_UNorm
+    Platform: Windows
+  - AdditionalEffectTechniqueCombinations: null
+    AlphaCompressionFormat: R8G8B8A8_UNorm
+    CompileEffects: false
+    GraphicsBackend: DirectX11
+    LauncherType: SDL
+    Name: SDL
+    NonAlphaCompressionFormat: R8G8B8A8_UNorm
+    Platform: Windows
+ResourcesPath: Content
