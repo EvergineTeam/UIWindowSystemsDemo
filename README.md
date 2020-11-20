@@ -1,30 +1,23 @@
-# UIWindowSystemsDemo
+# UI API integrations Demo
 
-## Introduction
+This demo shows how you can integrate WaveEngine in an application using the WindowSystem. The Windows Forms and SDL uses the full window to render the application and the WPF sample demonstrates a way to include a WaveEngine renderer and how it can interact with WPF controls.
 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
+We are still working to improve the existing WindowSystems (like modifying the SDL sample to run in Linux and Mac) and to add more supported platforms (like WinUI).
 
-## Getting Started
+![alt Windows Forms sample](Images/FormsSample.png)
 
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+![alt SDL sample](Images/SDLSample.png)
 
-1. Installation process
-2. Software dependencies
-3. Latest releases
-4. API references
+![alt WPF sample](Images/WpfSample.png)
 
 ## Build and Test
 
-TODO: Describe and show how to build your code and run the tests.
+Required Visual Studio 16.8 with .NET5 support.
 
-## Contribute
-
-TODO: Explain how other users and developers can contribute to make your code better.
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops).
+You can also test the binaries in the [Releases](https://github.com/WaveEngine/UIWindowSystemsDemo/releases) section.
 
 ----
-Powered by **[WaveEngine 3.0](http://www.waveengine.net)**
+Powered by **[WaveEngine 3.1](http://www.waveengine.net)**
 
 LET'S CONNECT!
 
