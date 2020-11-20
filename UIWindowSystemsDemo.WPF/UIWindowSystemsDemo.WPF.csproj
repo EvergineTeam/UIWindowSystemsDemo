@@ -6,12 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WaveEngine.DirectX11" Version="3.0.0.6450-nightly" />
-    <PackageReference Include="WaveEngine.HLSLEverywhere" Version="3.0.0.6450-nightly" />
-    <PackageReference Include="WaveEngine.XAudio2" Version="3.0.0.6450-nightly" />
-    <PackageReference Include="WaveEngine.WPF" Version="3.0.0.6450-nightly" />
-    <PackageReference Include="WaveEngine.Targets" Version="3.0.0.6450-nightly" />
-    <PackageReference Include="WaveEngine.Targets.Windows" Version="3.0.0.6450-nightly" />
+    <PackageReference Include="WaveEngine.DirectX11" Version="3.1.0.6468-preview" />
+    <PackageReference Include="WaveEngine.HLSLEverywhere" Version="3.1.0.6468-preview" />
+    <PackageReference Include="WaveEngine.XAudio2" Version="3.1.0.6468-preview" />
+    <PackageReference Include="WaveEngine.WPF" Version="3.1.0.6468-preview" />
+    <PackageReference Include="WaveEngine.Targets" Version="3.1.0.6468-preview" />
+    <PackageReference Include="WaveEngine.Targets.Windows" Version="3.1.0.6468-preview" />
     <PackageReference Include="SharpDX.Direct3D9" Version="4.2.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
