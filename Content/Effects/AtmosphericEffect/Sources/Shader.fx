@@ -2,17 +2,19 @@
 	
 	[directives:SunDisk SUNDISK_OFF SUNDISK]
 	[directives:Multiview MULTIVIEW_OFF MULTIVIEW]
+	[directives:ColorSpace GAMMA_COLORSPACE_OFF GAMMA_COLORSPACE]
 
 	cbuffer PerCamera : register(b0)
 	{
-		float4	  CameraPosition			: packoffset(c0.x); [CameraPosition]
+		float3	  CameraPosition			: packoffset(c0.x); [CameraPosition]
 		float4x4  ViewProj					: packoffset(c1.x); [ViewProjection]
 
 		float     Exposure        			: packoffset(c5.x); [CameraExposure]
 		float     IblLuminance				: packoffset(c5.y); [IBLLuminance]
 		int       EyeCount 					: packoffset(c5.z); [MultiviewCount]
-		float4x4  MultiviewViewProj[6]		: packoffset(c6.x); [MultiviewViewProjection]
-		float4    MultiviewCameraPos[6]		: packoffset(c30.x); [MultiviewPosition]
+		float4    MultiviewPosition[6]		: packoffset(c6.x); [MultiviewPosition]
+		float4x4  MultiviewViewProj[6]		: packoffset(c12.x); [MultiviewViewProjection]
+		
 	};
 	
 	cbuffer PerScene : register(b1)
@@ -42,7 +44,12 @@
     #define MIE_G2 0.9801
 
     #define SKY_GROUND_THRESHOLD -0.0075
-    
+
+	float3 LinearToGamma(const float3 color)
+	{
+		return pow(color.rgb, 1 / 2.2);
+	}
+
 	struct VS_IN
 	{
 		float4 vertex 	: POSITION;
@@ -65,10 +72,9 @@
 
 	#if MULTIVIEW
 		const int iid = input.InstId / EyeCount;
-		const int vid = input.InstId % EyeCount;
-
-		float4 vertexPosition = input.vertex + MultiviewCameraPos[vid];
+		const int vid = input.InstId % EyeCount;		
 		const float4x4 viewProj = MultiviewViewProj[vid];
+		const float3 cameraPosition = MultiviewPosition[vid].xyz;
 
 		// Note which view this vertex has been sent to. Used for matrix lookup.
 		// Taking the modulo of the instance ID allows geometry instancing to be used
@@ -77,10 +83,12 @@
 	
 		output.ViewId = vid;		
 	#else
-		float4 vertexPosition = input.vertex + CameraPosition;
-		float4x4 viewProj = ViewProj;
+		const float3 cameraPosition = CameraPosition;		
+		const float4x4 viewProj = ViewProj;
 	#endif
 		
+		float4 vertexPosition = input.vertex;		
+		vertexPosition.xyz += cameraPosition.xyz;
 		output.pos = mul(vertexPosition, viewProj);
 
         // Get the ray from the camera to the vertex and its length (which is the far point of the ray passing through the atmosphere)
@@ -144,7 +152,11 @@
         #endif
 
 		col *= IblLuminance * Exposure;
-			
+
+#if GAMMA_COLORSPACE
+		col = LinearToGamma(col);
+#endif
+
         return float4(col ,1.0);
 	}
 

@@ -43,6 +43,8 @@ namespace UIWindowSystemsDemo.WPF
 
                 WaveApplication.UpdateFrame(gameTime);
                 WaveApplication.DrawFrame(gameTime);
+
+                graphicsContext.DXDeviceContext.Flush();
             });
         }
     }

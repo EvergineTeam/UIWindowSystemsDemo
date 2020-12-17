@@ -63,7 +63,7 @@ Items:
       - !WaveEngine.Framework.Graphics.Camera3D,WaveEngine.Framework
         Id: 5b10653e-93d2-48e7-884f-a07b2ac173ee
         Aperture: 1.0
-        AspectRatio: 1.55045867
+        AspectRatio: 1.85806453
         AutoExposureEnabled: false
         CameraOrder: 0.0
         ClearDepth: 1.0
@@ -74,7 +74,7 @@ Items:
           MaxDepth: 1.0
           MinDepth: 0.0
         DisplayTag: null
-        DisplayTagDirty: false
+        DisplayTagDirty: true
         Exposure: 1.0
         FarPlane: 1000.0
         FieldOfView: 0.785398185
@@ -94,10 +94,10 @@ Items:
         MinLogLuminance: -10.0
         NearPlane: 0.100000001
         ScreenViewport:
-          Height: 218.0
+          Height: 310.0
           MaxDepth: 1.0
           MinDepth: 0.0
-          Width: 338.0
+          Width: 576.0
           X: 0.0
           Y: 0.0
         Sensitivity: 100.0
@@ -148,7 +148,7 @@ Items:
           R: 249
         ColorByTemperature: true
         Illuminance: 10.0
-        Intensity: 10.0
+        Intensity: 3.0
         IsEnabled: true
         LinearColor:
           A: 0.0
@@ -187,7 +187,7 @@ Items:
         Id: bb44cd62-4d92-418a-8a42-bbc2ed2b6f07
         AsignedTo: Default
         IsEnabled: true
-        Material: dc18a5b2-b8f9-4ddc-b66c-3059fc4f4f47
+        Material: d418b16b-5f56-4dcd-acfb-d024c3ea1e71
       - !WaveEngine.Components.Graphics3D.SphereMesh,WaveEngine.Components
         Id: 3ef37285-f016-4173-bbf0-278ec1624224
         Diameter: 1.0
