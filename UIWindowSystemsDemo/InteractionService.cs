@@ -7,7 +7,7 @@ namespace UIWindowSystemsDemo
     {
         public event EventHandler CameraReset;
 
-        public float RadioYRotation { get; set; }
+        public float Displacement { get; set; }
 
         public void ResetCamera()
         {

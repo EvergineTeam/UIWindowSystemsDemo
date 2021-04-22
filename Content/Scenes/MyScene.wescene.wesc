@@ -3,7 +3,7 @@ Id: 760b2dad-8a54-4cd1-9158-5da1b99358e8
 DefaultProfile:
   ExcludeAsset: false
   Name: null
-  Platform: Undefined  
+  Platform: Undefined
 ExportAsRaw: false
 Profiles: {}
 Source:

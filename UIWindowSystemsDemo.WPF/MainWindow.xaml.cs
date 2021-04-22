@@ -52,9 +52,9 @@ namespace UIWindowSystemsDemo.WPF
         {
             interactionService.ResetCamera();
         }
-        private void RadioRotationChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void DisplacementChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            interactionService.RadioYRotation = (float)e.NewValue;
+            interactionService.Displacement = (float)e.NewValue;
         }
 
         private void SurfaceUpdated(IntPtr surfaceHandle)

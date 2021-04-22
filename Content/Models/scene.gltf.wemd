@@ -1,0 +1,57 @@
+!WaveEngine.Assets.Exporters.ModelMetaFile,WaveEngine.Assets
+Id: a24c3d0f-8797-41de-9f7d-5ce623babed6
+Clips: []
+DefaultProfile:
+  ExcludeAsset: false
+  Name: null
+  Platform: Undefined
+ExportAnimations: true
+ExportAsRaw: false
+GenerateTangentSpace: true
+Profiles: {}
+Source:
+  Header:
+    Id: fedb7092-0904-440a-9a2f-2f36a99da75d
+    IsCompressed: true
+  LastModified: 0001-01-01T00:00:00.0000000
+  ModelInfo:
+    Id: 154bdc7e-828f-4d7c-a6eb-4e490ce0e8ad
+    AnimationTracks: []
+    EmbeddedResources: null
+    Materials:
+      - Item1: accent-yellow
+        Item2: 3e9ba074-ae29-446f-bdd3-ce9be38dddfc
+      - Item1: metal-bright
+        Item2: 6615de8d-c2a7-4524-862e-bac8776b47f6
+      - Item1: metal-dark
+        Item2: e1e260b1-bc1e-41c0-9717-195d850eea85
+      - Item1: metal-mid
+        Item2: a2d10bad-6c5b-417d-a9f4-14b1ef326188
+      - Item1: plastic-cone-black
+        Item2: 70bd7abe-a4c2-4aff-9b2c-b4dab37e2869
+      - Item1: plastic-grey
+        Item2: 3d8c4228-9147-4bf1-9fcb-3816f5771d17
+    Nodes:
+      - RootNode (gltf orientation matrix)
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix)
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_3
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_4
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_5
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_6
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_7
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_8
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_9
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_10
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_11
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_12
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_13
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_14
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_15
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_16
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_17
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_18
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_19
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_20
+      - RootNode (gltf orientation matrix).RootNode (model correction matrix).turbine-01_obj_cleaner_materialmerger_gles._Node_21
+SwapWindingOrder: false
