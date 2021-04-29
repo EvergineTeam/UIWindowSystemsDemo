@@ -17,7 +17,7 @@ Required Visual Studio 16.8 with .NET5 support.
 You can also test the binaries in the [Releases](https://github.com/WaveEngine/UIWindowSystemsDemo/releases) section.
 
 ----
-Powered by **[WaveEngine 3.1](http://www.waveengine.net)**
+Powered by **[WaveEngine 3.2](http://www.waveengine.net)**
 
 LET'S CONNECT!
 
