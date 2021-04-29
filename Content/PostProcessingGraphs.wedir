@@ -6,4 +6,16 @@ DefaultProfile:
   OutputName: null
   Platform: Undefined
 ExportAsRaw: false
-Profiles: {}
+Profiles:
+  UWP.MixedReality:
+    ExcludeAsset: true
+    Name: UWP.MixedReality
+    Platform: UWP
+  Web:
+    ExcludeAsset: true
+    Name: Web
+    Platform: Web
+  Web1:
+    ExcludeAsset: true
+    Name: Web1
+    Platform: Web

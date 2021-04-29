@@ -4,8 +4,15 @@ DefaultProfile:
   Compile: ByPlatform
   ExcludeAsset: false
   GraphicsBackend: ByPlatform
-  MandatoryCombinations: All
+  MandatoryCombinations: SUNDISK, SUNDISK-GAMMA_COLORSPACE, GAMMA_COLORSPACE
   Name: null
   Platform: Undefined
 ExportAsRaw: false
-Profiles: {}
+Profiles:
+  UWP.MixedReality:
+    Compile: Yes
+    ExcludeAsset: false
+    GraphicsBackend: DirectX11
+    MandatoryCombinations: All
+    Name: UWP.MixedReality
+    Platform: UWP

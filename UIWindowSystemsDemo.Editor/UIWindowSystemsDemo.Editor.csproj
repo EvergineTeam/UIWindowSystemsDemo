@@ -4,10 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WaveEngine.Common" Version="3.1.0.6768-preview2" />
-    <PackageReference Include="WaveEngine.Components" Version="3.1.0.6768-preview2" />
-    <PackageReference Include="WaveEngine.Framework" Version="3.1.0.6768-preview2" />
-    <PackageReference Include="WaveEngine.Editor.Extension" Version="3.1.0.6768-preview2" />
+    <PackageReference Include="WaveEngine.Common" Version="3.2.0.7765-preview" />
+    <PackageReference Include="WaveEngine.Components" Version="3.2.0.7765-preview" />
+    <PackageReference Include="WaveEngine.Framework" Version="3.2.0.7765-preview" />
+    <PackageReference Include="WaveEngine.Editor.Extension" Version="3.2.0.7765-preview" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
