@@ -4,6 +4,8 @@ This demo shows how you can integrate WaveEngine in an application using the Win
 
 We are still working to improve the existing WindowSystems (like modifying the SDL sample to run in Linux and Mac) and to add more supported platforms (like WinUI).
 
+Video: https://www.youtube.com/watch?v=MOgKXaxselg
+
 ![alt WPF sample](Images/WpfSample.png)
 
 ![alt Windows Forms sample](Images/FormsSample.png)
