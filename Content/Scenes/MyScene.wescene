@@ -119,6 +119,95 @@ Items:
     Children: []
     Id: 9841b6b3-9c09-4b60-b442-a5c63257ee02
   - !WaveEngine.Framework.Assets.AssetSources.Entities.EntityItemModel,WaveEngine.Framework
+    Name: Camera
+    Tag: null
+    IsEnabled: true
+    IsStatic: false
+    Components:
+      - !WaveEngine.Framework.Graphics.Transform3D,WaveEngine.Framework
+        Id: 403b5167-ebce-4912-9414-3527c91be88b
+        IsEnabled: true
+        LocalOrientation:
+          W: 0.261014581
+          X: -0.00591407064
+          Y: -0.965067923
+          Z: -0.0219164938
+        LocalPosition:
+          X: -2.59984756
+          Y: 1.16591811
+          Z: -4.81202841
+        LocalScale:
+          X: 1.0
+          Y: 1.0
+          Z: 1.0
+      - !WaveEngine.Components.Cameras.FreeCamera3D,WaveEngine.Components
+        Id: 9d23e559-2183-4306-86f3-0bee3ef00585
+        IsEnabled: true
+        MaxPitch: 1.49225616
+        MouseSensibility: 0.0299999993
+        Speed: 5.0
+        TouchMoveAndOrientationRatio: 0.5
+        TouchSensibility: 1.0
+        UpdateOrder: 0.5
+      - !WaveEngine.Framework.Graphics.Camera3D,WaveEngine.Framework
+        Id: 7344bae4-8111-40c2-9dbe-59c42a23c0ea
+        Aperture: 1.0
+        AspectRatio: 1.38110745
+        AutoDepthBounds: false
+        AutoExposureEnabled: false
+        CameraOrder: 0.0
+        ClearDepth: 1.0
+        ClearFlags: All
+        ClearStencil: 0
+        Compensation: 0.0
+        DepthRange:
+          MaxDepth: 1.0
+          MinDepth: 0.0
+        DisplayTag: Display2
+        DisplayTagDirty: false
+        Exposure: 1.0
+        FarPlane: 1000.0
+        FieldOfView: 0.785398185
+        FieldOfViewAxis: Vertical
+        FocalDistance: 1.0
+        FocalLength: 50.0
+        FrustumCullingEnabled: true
+        HDREnabled: true
+        IsEnabled: true
+        LayerMaskDefaultValue: true
+        LinearBackgroundColor:
+          A: 1.0
+          B: 0.851251662
+          G: 0.306634784
+          R: 0.12752977
+        LogLuminanceRange: 12.0
+        MinLogLuminance: -10.0
+        NearPlane: 0.100000001
+        ScreenViewport:
+          Height: 307.0
+          MaxDepth: 1.0
+          MinDepth: 0.0
+          Width: 424.0
+          X: 0.0
+          Y: 0.0
+        Sensitivity: 100.0
+        SensorSize:
+          X: 36.0
+          Y: 24.0
+        ShutterSpeed: 1.20000005
+        TAU: 1.10000002
+        TagFilter: null
+        UpVector:
+          X: 0.0
+          Y: 1.0
+          Z: 0.0
+        UsePhysicalParameters: false
+      - !UIWindowSystemsDemo.ResetCameraComponent,UIWindowSystemsDemo
+        Id: 89f035ec-47a6-4bd4-82bc-e7da9cbe49df
+        IsEnabled: true
+    Children: []
+    Id: aa003589-00da-4f4b-aaed-31e990551fba
+  - !WaveEngine.Framework.Assets.AssetSources.Entities.EntityItemModel,WaveEngine.Framework
     Name: SunLight
     Tag: null
     IsEnabled: true
