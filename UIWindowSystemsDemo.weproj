@@ -23,4 +23,12 @@ Profiles:
     Name: SDL
     NonAlphaCompressionFormat: R8G8B8A8_UNorm
     Platform: Windows
+  - AdditionalEffectTechniqueCombinations: SHADOW_SUPPORTED
+    AlphaCompressionFormat: BC3_UNorm
+    CompileEffects: false
+    GraphicsBackend: DirectX11
+    LauncherType: Default
+    Name: UWP
+    NonAlphaCompressionFormat: BC3_UNorm
+    Platform: UWP
 ResourcesPath: Content
