@@ -21,13 +21,13 @@
                 Margin="0,0,0,12"
                 FontWeight="Bold"
                 Text="WaveEngine WPF integration sample." />
-            <TextBlock Text="You can move the scene's camera using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the camera to its initial position and orientation." TextWrapping="Wrap" />
+            <TextBlock Text="You can move the scene's cameras using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation." TextWrapping="Wrap" />
             <Button
                 Margin="0,12"
                 Padding="12,3"
                 HorizontalAlignment="Left"
                 Click="ResetCameraClick"
-                Content="Reset camera" />
+                Content="Reset cameras" />
             <TextBlock Text="Displacement:" />
             <Slider
                 AutoToolTipPlacement="BottomRight"

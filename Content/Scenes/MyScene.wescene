@@ -119,7 +119,7 @@ Items:
     Children: []
     Id: 9841b6b3-9c09-4b60-b442-a5c63257ee02
   - !WaveEngine.Framework.Assets.AssetSources.Entities.EntityItemModel,WaveEngine.Framework
-    Name: Camera
+    Name: Camera2
     Tag: null
     IsEnabled: true
     IsStatic: false
