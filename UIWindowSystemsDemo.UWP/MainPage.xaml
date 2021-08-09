@@ -9,8 +9,29 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition MaxWidth="300"/>
         </Grid.ColumnDefinitions>
         <SwapChainPanel x:Name="SwapChainPanel" Grid.Column="0"/>
         <SwapChainPanel x:Name="SwapChainPanel2" Grid.Column="1" />
+        <StackPanel Grid.Column="2" Margin="12">
+            <TextBlock
+                Margin="0,0,0,12"
+                FontWeight="Bold"
+                Text="WaveEngine WPF integration sample." />
+            <TextBlock Text="You can move the scene's cameras using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation." TextWrapping="Wrap" />
+            <Button
+                Margin="0,12"
+                Padding="12,3"
+                HorizontalAlignment="Left"
+                Click="ResetCameraClick"
+                Content="Reset cameras" />
+            <TextBlock Text="Displacement:" />
+            <Slider
+                ToolTipService.Placement="Bottom"
+                StepFrequency="1"
+                Maximum="10"
+                Minimum="0"
+                ValueChanged="DisplacementChanged" />
+        </StackPanel>
     </Grid>
 </Page>

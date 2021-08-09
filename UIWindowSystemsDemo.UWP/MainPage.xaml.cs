@@ -11,6 +11,8 @@ namespace UIWindowSystemsDemo.UWP
 {
     public sealed partial class MainPage : Page
     {
+        private InteractionService interactionService;
+
         public MainPage()
         {
             InitializeComponent();
@@ -25,6 +27,10 @@ namespace UIWindowSystemsDemo.UWP
             // Create Services
             UWPWindowsSystem windowsSystem = new UWPWindowsSystem();
             application.Container.RegisterInstance(windowsSystem);
+            
+            interactionService = new InteractionService();
+            application.Container.RegisterInstance(interactionService);
+
             var surface = (UWPSurface)windowsSystem.CreateSurface(SwapChainPanel);
             var surface2 = (UWPSurface)windowsSystem.CreateSurface(SwapChainPanel2);
 
@@ -93,6 +99,16 @@ namespace UIWindowSystemsDemo.UWP
             swapChain.VerticalSync = true;
 
             return swapChain;
+        }
+
+        private void DisplacementChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+            interactionService.Displacement = (float)e.NewValue;
+        }
+
+        private void ResetCameraClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            interactionService.ResetCamera();
         }
     }
 }
