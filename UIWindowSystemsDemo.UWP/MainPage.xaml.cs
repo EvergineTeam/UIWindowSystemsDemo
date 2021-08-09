@@ -26,12 +26,13 @@ namespace UIWindowSystemsDemo.UWP
             UWPWindowsSystem windowsSystem = new UWPWindowsSystem();
             application.Container.RegisterInstance(windowsSystem);
             var surface = (UWPSurface)windowsSystem.CreateSurface(SwapChainPanel);
+            var surface2 = (UWPSurface)windowsSystem.CreateSurface(SwapChainPanel2);
 
-            ConfigureGraphicsContext(application, surface);
-			
+            ConfigureGraphicsContext(application, surface, surface2);
+
             // Creates XAudio device
             var xaudio = new WaveEngine.XAudio2.XAudioDevice();
-            application.Container.RegisterInstance(xaudio);			
+            application.Container.RegisterInstance(xaudio);
 
             Stopwatch clockTimer = Stopwatch.StartNew();
             windowsSystem.Run(
@@ -49,10 +50,30 @@ namespace UIWindowSystemsDemo.UWP
             });
         }
 
-        private static void ConfigureGraphicsContext(Application application, UWPSurface surface)
+        private static void ConfigureGraphicsContext(Application application, UWPSurface surface, UWPSurface surface2)
         {
             GraphicsContext graphicsContext = new DX11GraphicsContext();
             graphicsContext.CreateDevice();
+
+            var swapChain = CreateSwapChain(surface, graphicsContext);
+            var swapChain2 = CreateSwapChain(surface2, graphicsContext);
+
+            surface.NativeSurface.SwapChain = swapChain;
+            surface2.NativeSurface.SwapChain = swapChain2;
+
+            var graphicsPresenter = application.Container.Resolve<GraphicsPresenter>();
+            var firstDisplay = new Display(surface, swapChain);
+            var secondDisplay = new Display(surface2, swapChain2);
+
+            graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
+            // Take care about camera entity names, if there are more cameras using same name that the DisplayTag Camera, it will take the first camera with the found name
+            graphicsPresenter.AddDisplay("Display2", secondDisplay);
+
+            application.Container.RegisterInstance(graphicsContext);
+        }
+
+        private static SwapChain CreateSwapChain(UWPSurface surface, GraphicsContext graphicsContext)
+        {
             SwapChainDescription swapChainDescription = new SwapChainDescription()
             {
                 SurfaceInfo = surface.SurfaceInfo,
@@ -66,15 +87,11 @@ namespace UIWindowSystemsDemo.UWP
                 IsWindowed = true,
                 RefreshRate = 60
             };
+
             var swapChain = graphicsContext.CreateSwapChain(swapChainDescription);
             swapChain.VerticalSync = true;
-            surface.NativeSurface.SwapChain = swapChain;
 
-            var graphicsPresenter = application.Container.Resolve<GraphicsPresenter>();
-            var firstDisplay = new Display(surface, swapChain);
-            graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
-
-            application.Container.RegisterInstance(graphicsContext);
+            return swapChain;
         }
     }
 }

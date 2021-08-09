@@ -5,5 +5,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <SwapChainPanel x:Name="SwapChainPanel" />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <SwapChainPanel x:Name="SwapChainPanel" Grid.Column="0"/>
+        <SwapChainPanel x:Name="SwapChainPanel2" Grid.Column="1" />
+    </Grid>
 </Page>
