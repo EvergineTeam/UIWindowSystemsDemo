@@ -66,6 +66,7 @@ namespace UIWindowSystemsDemo.UWP
             var secondDisplay = new Display(surface2, swapChain2);
 
             graphicsPresenter.AddDisplay("DefaultDisplay", firstDisplay);
+
             // Take care about camera entity names, if there are more cameras using same name that the DisplayTag Camera, it will take the first camera with the found name
             graphicsPresenter.AddDisplay("Display2", secondDisplay);
 
