@@ -1,6 +1,6 @@
 # UI API integrations Demo
 
-This demo shows how you can integrate WaveEngine in an application using the WindowSystem. The Windows Forms and SDL samples use the full window to render the application, the WPF and UWP samples demonstrate a way to include a WaveEngine renderer and how it can interact with WPF controls.
+This demo shows how you can integrate WaveEngine in an application using the WindowSystem. The Windows Forms, SDL and UWP samples use the full window to render the application, the WPF sample demonstrates a way to include a WaveEngine renderer and how it can interact with WPF controls.
 
 We are still working to improve the existing WindowSystems (like modifying the SDL sample to run in Linux and Mac) and to add more supported platforms (like WinUI).
 
