@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 using WaveEngine.Common.Graphics;
 using WaveEngine.DirectX11;
 using WaveEngine.Framework.Graphics;
@@ -15,8 +16,10 @@ namespace UIWindowSystemsDemo.WPF
     public partial class MainWindow : Window
     {
         private DX11GraphicsContext dX11GraphicsContext;
-        private WPFSurface surface;
-        private Display display;
+        private WPFSurface surface1;
+        private Display display1;
+        private WPFSurface surface2;
+        private Display display2;
         private InteractionService interactionService;
 
         public MainWindow()
@@ -35,17 +38,31 @@ namespace UIWindowSystemsDemo.WPF
             var graphicsPresenter = application.Container.Resolve<GraphicsPresenter>();
             dX11GraphicsContext = application.Container.Resolve<DX11GraphicsContext>();
 
-            surface = new WPFSurface(0, 0) { SurfaceUpdatedAction = SurfaceUpdated };
-            display = new Display(surface, (FrameBuffer)null);
+            surface1 = new WPFSurface(0, 0) { SurfaceUpdatedAction = s => SurfaceUpdated(s, display1) };
+            display1 = new Display(surface1, (FrameBuffer)null);
+            surface2 = new WPFSurface(0, 0) { SurfaceUpdatedAction = s => SurfaceUpdated(s, display2) };
+            display2 = new Display(surface2, (FrameBuffer)null);
 
-            WaveContainer.Content = surface.NativeControl;
-            surface.NativeControl.MouseDown += NativeControlMouseDown;
-            graphicsPresenter.AddDisplay("DefaultDisplay", display);
+            WaveContainer.Content = surface1.NativeControl;
+            WaveContainer2.Content = surface2.NativeControl;
+            surface1.NativeControl.MouseDown += NativeControlMouseDown;
+            surface2.NativeControl.MouseDown += NativeControlMouseDown;
+
+            surface1.NativeControl.MouseUp += NativeControlMouseUp;
+            surface2.NativeControl.MouseUp += NativeControlMouseUp;
+            graphicsPresenter.AddDisplay("DefaultDisplay", display1);
+            graphicsPresenter.AddDisplay("Display2", display2);
+        }
+
+        private void NativeControlMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ((FrameworkElement)sender).ReleaseMouseCapture();
         }
 
         private void NativeControlMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             ((FrameworkElement)sender).Focus();
+            ((FrameworkElement)sender).CaptureMouse();
         }
 
         private void ResetCameraClick(object sender, RoutedEventArgs e)
@@ -57,7 +74,7 @@ namespace UIWindowSystemsDemo.WPF
             interactionService.Displacement = (float)e.NewValue;
         }
 
-        private void SurfaceUpdated(IntPtr surfaceHandle)
+        private void SurfaceUpdated(IntPtr surfaceHandle, Display display)
         {
             SharpDX.ComObject sharedObject = new SharpDX.ComObject(surfaceHandle);
             SharpDX.DXGI.Resource sharedResource = sharedObject.QueryInterface<SharpDX.DXGI.Resource>();
