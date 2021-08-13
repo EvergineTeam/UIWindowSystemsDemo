@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 using WaveEngine.Common.Graphics;
 using WaveEngine.DirectX11;
 using WaveEngine.Framework.Graphics;
@@ -46,13 +47,22 @@ namespace UIWindowSystemsDemo.WPF
             WaveContainer2.Content = surface2.NativeControl;
             surface1.NativeControl.MouseDown += NativeControlMouseDown;
             surface2.NativeControl.MouseDown += NativeControlMouseDown;
+
+            surface1.NativeControl.MouseUp += NativeControlMouseUp;
+            surface2.NativeControl.MouseUp += NativeControlMouseUp;
             graphicsPresenter.AddDisplay("DefaultDisplay", display1);
             graphicsPresenter.AddDisplay("Display2", display2);
+        }
+
+        private void NativeControlMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ((FrameworkElement)sender).ReleaseMouseCapture();
         }
 
         private void NativeControlMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             ((FrameworkElement)sender).Focus();
+            ((FrameworkElement)sender).CaptureMouse();
         }
 
         private void ResetCameraClick(object sender, RoutedEventArgs e)
