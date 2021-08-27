@@ -1,3 +1,7 @@
+Packages:
+  - Id: WaveEngine.Core
+    LocalPath: null
+    Version: 3.2.0.8440-nightly
 Profiles:
   - AdditionalEffectTechniqueCombinations: null
     AlphaCompressionFormat: BC3_UNorm

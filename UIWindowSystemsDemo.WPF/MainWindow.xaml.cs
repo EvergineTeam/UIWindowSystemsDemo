@@ -45,11 +45,12 @@ namespace UIWindowSystemsDemo.WPF
 
             WaveContainer.Content = surface1.NativeControl;
             WaveContainer2.Content = surface2.NativeControl;
+
             surface1.NativeControl.MouseDown += NativeControlMouseDown;
             surface2.NativeControl.MouseDown += NativeControlMouseDown;
-
             surface1.NativeControl.MouseUp += NativeControlMouseUp;
             surface2.NativeControl.MouseUp += NativeControlMouseUp;
+
             graphicsPresenter.AddDisplay("DefaultDisplay", display1);
             graphicsPresenter.AddDisplay("Display2", display2);
         }
