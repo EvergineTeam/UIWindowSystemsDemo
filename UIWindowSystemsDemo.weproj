@@ -1,3 +1,7 @@
+Packages:
+  - Id: WaveEngine.Core
+    LocalPath: null
+    Version: 3.3.0.8524-preview
 Profiles:
   - AdditionalEffectTechniqueCombinations: null
     AlphaCompressionFormat: BC3_UNorm
@@ -31,4 +35,12 @@ Profiles:
     Name: UWP
     NonAlphaCompressionFormat: BC3_UNorm
     Platform: UWP
+  - AdditionalEffectTechniqueCombinations: SHADOW_SUPPORTED
+    AlphaCompressionFormat: BC3_UNorm
+    CompileEffects: false
+    GraphicsBackend: DirectX11
+    LauncherType: WinUI
+    Name: WinUI
+    NonAlphaCompressionFormat: BC3_UNorm
+    Platform: Windows
 ResourcesPath: Content
