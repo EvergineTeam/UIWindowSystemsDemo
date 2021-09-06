@@ -131,6 +131,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
     </PackageReference>
+    <PackageReference Include="WaveEngine.DirectX11">
+      <Version>3.3.0.8524-preview</Version>
+    </PackageReference>
     <PackageReference Include="WaveEngine.Targets">
       <Version>3.3.0.8524-preview</Version>
     </PackageReference>
