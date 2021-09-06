@@ -77,9 +77,9 @@ namespace UIWindowSystemsDemo.WPF
 
         private void SurfaceUpdated(IntPtr surfaceHandle, Display display)
         {
-            SharpDX.ComObject sharedObject = new SharpDX.ComObject(surfaceHandle);
-            SharpDX.DXGI.Resource sharedResource = sharedObject.QueryInterface<SharpDX.DXGI.Resource>();
-            SharpDX.Direct3D11.Texture2D nativeRexture = dX11GraphicsContext.DXDevice.OpenSharedResource<SharpDX.Direct3D11.Texture2D>(sharedResource.SharedHandle);
+            SharpGen.Runtime.ComObject sharedObject = new SharpGen.Runtime.ComObject(surfaceHandle);
+            Vortice.DXGI.IDXGIResource sharedResource = sharedObject.QueryInterface<Vortice.DXGI.IDXGIResource>();
+            Vortice.Direct3D11.ID3D11Texture2D nativeRexture = dX11GraphicsContext.DXDevice.OpenSharedResource<Vortice.Direct3D11.ID3D11Texture2D>(sharedResource.SharedHandle);
 
             var texture = DX11Texture.FromDirectXTexture(dX11GraphicsContext, nativeRexture);
             var rTDepthTargetDescription = new TextureDescription()
@@ -100,7 +100,7 @@ namespace UIWindowSystemsDemo.WPF
 
             var rTDepthTarget = this.dX11GraphicsContext.Factory.CreateTexture(ref rTDepthTargetDescription, "SwapChain_Depth");
             var frameBuffer = this.dX11GraphicsContext.Factory.CreateFrameBuffer(new FrameBufferAttachment(rTDepthTarget, 0, 1), new[] { new FrameBufferAttachment(texture, 0, 1) });
-            frameBuffer.SwapchainAssociated = true;
+            frameBuffer.IntermediateBufferAssociated = true;
             display.FrameBuffer?.Dispose();
             display.UpdateFrameBuffer(frameBuffer);
         }

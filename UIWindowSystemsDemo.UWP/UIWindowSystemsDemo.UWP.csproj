@@ -132,16 +132,16 @@
       <Version>6.2.10</Version>
     </PackageReference>
     <PackageReference Include="WaveEngine.Targets">
-      <Version>3.2.0.8440-nightly</Version>
+      <Version>3.3.0.8524-preview</Version>
     </PackageReference>
     <PackageReference Include="WaveEngine.Targets.UWP">
-      <Version>3.2.0.8440-nightly</Version>
+      <Version>3.3.0.8524-preview</Version>
     </PackageReference>
     <PackageReference Include="WaveEngine.UWPView">
-      <Version>3.2.0.8440-nightly</Version>
+      <Version>3.3.0.8524-preview</Version>
     </PackageReference>
     <PackageReference Include="WaveEngine.XAudio2">
-      <Version>3.2.0.8440-nightly</Version>
+      <Version>3.3.0.8524-preview</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
