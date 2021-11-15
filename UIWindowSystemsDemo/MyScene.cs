@@ -1,9 +1,9 @@
-using WaveEngine.Common.Graphics;
-using WaveEngine.Components.Graphics3D;
-using WaveEngine.Framework;
-using WaveEngine.Framework.Graphics;
-using WaveEngine.Framework.Services;
-using WaveEngine.Mathematics;
+using Evergine.Common.Graphics;
+using Evergine.Components.Graphics3D;
+using Evergine.Framework;
+using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
+using Evergine.Mathematics;
 
 namespace UIWindowSystemsDemo
 {
@@ -12,7 +12,7 @@ namespace UIWindowSystemsDemo
 		public override void RegisterManagers()
         {
         	base.RegisterManagers();
-        	this.Managers.AddManager(new WaveEngine.Bullet.BulletPhysicManager3D());        	
+        	this.Managers.AddManager(new Evergine.Bullet.BulletPhysicManager3D());        	
         }
 
         protected override void CreateScene()

@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using WaveEngine.Common.Graphics;
-using WaveEngine.Framework;
-using WaveEngine.Framework.Graphics;
-using WaveEngine.Framework.Services;
+using Evergine.Common.Graphics;
+using Evergine.Framework;
+using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
 
 namespace UIWindowSystemsDemo.SDL
 {
@@ -16,14 +16,14 @@ namespace UIWindowSystemsDemo.SDL
             // Create Services
             uint width = 1280;
             uint height = 720;
-            WindowsSystem windowsSystem = new WaveEngine.SDL.SDLWindowsSystem();
+            WindowsSystem windowsSystem = new Evergine.SDL.SDLWindowsSystem();
             application.Container.RegisterInstance(windowsSystem);
-            var window = windowsSystem.CreateWindow("WaveEngine SDL sample", width, height);
+            var window = windowsSystem.CreateWindow("Evergine SDL sample", width, height);
 
             ConfigureGraphicsContext(application, window);
 
             // Creates XAudio device
-            var xaudio = new WaveEngine.XAudio2.XAudioDevice();
+            var xaudio = new Evergine.XAudio2.XAudioDevice();
             application.Container.RegisterInstance(xaudio);
 
             Stopwatch clockTimer = Stopwatch.StartNew();
@@ -44,7 +44,7 @@ namespace UIWindowSystemsDemo.SDL
 
         private static void ConfigureGraphicsContext(Application application, Window window)
         {
-            GraphicsContext graphicsContext = new WaveEngine.DirectX11.DX11GraphicsContext();
+            GraphicsContext graphicsContext = new Evergine.DirectX11.DX11GraphicsContext();
             graphicsContext.CreateDevice();
             SwapChainDescription swapChainDescription = new SwapChainDescription()
             {

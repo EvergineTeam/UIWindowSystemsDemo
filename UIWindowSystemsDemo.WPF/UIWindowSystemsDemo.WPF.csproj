@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WaveEngine.DirectX11" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.HLSLEverywhere" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.XAudio2" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.WPF" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Targets" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Targets.Windows" Version="3.3.0.8524-preview" />
-    <PackageReference Include="Vortice.Direct3D9" Version="1.9.117" />
+    <PackageReference Include="Evergine.DirectX11" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.XAudio2" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.WPF" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Targets" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Vortice.Direct3D9" Version="2.1.0-beta2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />

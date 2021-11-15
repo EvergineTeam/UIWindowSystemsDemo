@@ -3,11 +3,11 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Input;
 using System.Diagnostics;
-using WaveEngine.Common.Graphics;
-using WaveEngine.DirectX11;
-using WaveEngine.Framework.Graphics;
-using WaveEngine.Framework.Services;
-using WaveEngine.WinUI;
+using Evergine.Common.Graphics;
+using Evergine.DirectX11;
+using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
+using Evergine.WinUI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -50,7 +50,7 @@ namespace UIWindowSystemsDemo.WinUI
             ConfigureGraphicsContext(application, surface2, "Display2");
 
             // Creates XAudio device
-            var xaudio = new WaveEngine.XAudio2.XAudioDevice();
+            var xaudio = new Evergine.XAudio2.XAudioDevice();
             application.Container.RegisterInstance(xaudio);
 
             Stopwatch clockTimer = Stopwatch.StartNew();
@@ -69,7 +69,7 @@ namespace UIWindowSystemsDemo.WinUI
             });
         }
 
-        private static void ConfigureGraphicsContext(WaveEngine.Framework.Application application, WinUISurface surface, string displayName)
+        private static void ConfigureGraphicsContext(Evergine.Framework.Application application, WinUISurface surface, string displayName)
         {
             GraphicsContext graphicsContext = application.Container.Resolve<GraphicsContext>();
             

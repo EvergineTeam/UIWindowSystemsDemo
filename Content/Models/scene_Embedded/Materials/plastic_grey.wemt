@@ -1,4 +1,4 @@
-!WaveEngine.Assets.Exporters.MaterialMetaFile,WaveEngine.Assets
+!Evergine.Assets.Exporters.MaterialMetaFile,Evergine.Assets
 Id: 3d8c4228-9147-4bf1-9fcb-3816f5771d17
 DefaultProfile:
   ExcludeAsset: false
@@ -16,10 +16,10 @@ MaterialInfo:
   OrderBias: 0
   Parameters:
     - Name: BaseColor
-      Type: WaveEngine.Mathematics.Vector3,WaveEngine.Mathematics
+      Type: Evergine.Mathematics.Vector3,Evergine.Mathematics
       ValueByteArray: 3J9rPtyfaz7cn2s+
     - Name: EmissiveColor
-      Type: WaveEngine.Mathematics.Vector3,WaveEngine.Mathematics
+      Type: Evergine.Mathematics.Vector3,Evergine.Mathematics
       ValueByteArray: AAAAAAAAAAAAAAAA
     - Name: Alpha
       Type: System.Single

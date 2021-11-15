@@ -1,20 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WaveEngine.Platform" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.DirectX11" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Vulkan" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Metal" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.HLSLEverywhere" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.XAudio2" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.OpenAL" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.SDL" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Targets" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Targets.NetCore" Version="3.3.0.8524-preview" />
+    <PackageReference Include="Evergine.Platform" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.DirectX11" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Vulkan" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Metal" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.XAudio2" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.OpenAL" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.SDL" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Targets" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Targets.NetCore" Version="2021.11.12.3-preview" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />

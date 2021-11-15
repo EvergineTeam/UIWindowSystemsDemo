@@ -1,3 +1,3 @@
-using WaveEngine.Common.Attributes;
+using Evergine.Common.Attributes;
 
-[assembly: WaveEngineAssembly(WaveAssemblyUsage.UserProject)]
+[assembly: EvergineAssembly(EvergineAssemblyUsage.UserProject)]

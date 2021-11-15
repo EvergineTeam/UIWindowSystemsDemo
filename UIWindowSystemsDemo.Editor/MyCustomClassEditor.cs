@@ -1,7 +1,7 @@
 using System;
-using WaveEngine.Common.Graphics;
-using WaveEngine.Editor.Extension;
-using WaveEngine.Editor.Extension.Attributes;
+using Evergine.Common.Graphics;
+using Evergine.Editor.Extension;
+using Evergine.Editor.Extension.Attributes;
 
 namespace UIWindowSystemsDemo
 {

@@ -329,7 +329,7 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
 
-# WaveEngine
-.waveengine/
-WaveContent.cs
+# Evergine
+.Evergine/
+EvergineContent.cs
 !**/Content/**/*.obj

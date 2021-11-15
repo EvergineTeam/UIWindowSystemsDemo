@@ -1,6 +1,6 @@
 # UI API integrations Demo
 
-This demo shows how you can integrate WaveEngine in an application using the WindowSystem. The Windows Forms, SDL and UWP samples use the full window to render the application, the WPF and WinUI samples demonstrate a way to include a WaveEngine renderer and how it can interact with WPF controls.
+This demo shows how you can integrate Evergine in an application using the WindowSystem. The Windows Forms, SDL and UWP samples use the full window to render the application, the WPF and WinUI samples demonstrate a way to include a Evergine renderer and how it can interact with WPF controls.
 
 We are still working to improve the existing WindowSystems (like modifying the SDL sample to run in Linux and Mac).
 
@@ -18,12 +18,12 @@ Video: https://www.youtube.com/watch?v=MOgKXaxselg
 
 ## Build and Test
 
-Required Visual Studio 16.8 with .NET5 support.
+Required Visual Studio 2022 with .NET6 support.
 
-You can also test the binaries in the [Releases](https://github.com/WaveEngine/UIWindowSystemsDemo/releases) section.
+You can also test the binaries in the [Releases](https://github.com/Evergine/UIWindowSystemsDemo/releases) section.
 
 ----
-Powered by **[WaveEngine 3.3](http://www.waveengine.net)**
+Powered by **[Evergine](http://www.evergine.com)**
 
 LET'S CONNECT!
 

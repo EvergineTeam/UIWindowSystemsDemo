@@ -1,10 +1,10 @@
 using System.Diagnostics;
-using WaveEngine.Common.Graphics;
-using WaveEngine.DirectX11;
-using WaveEngine.Framework;
-using WaveEngine.Framework.Graphics;
-using WaveEngine.Framework.Services;
-using WaveEngine.UWPView;
+using Evergine.Common.Graphics;
+using Evergine.DirectX11;
+using Evergine.Framework;
+using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
+using Evergine.UWPView;
 using Windows.UI.Xaml.Controls;
 
 namespace UIWindowSystemsDemo.UWP
@@ -36,7 +36,7 @@ namespace UIWindowSystemsDemo.UWP
             ConfigureGraphicsContext(application, surface);
 
             // Creates XAudio device
-            var xaudio = new WaveEngine.XAudio2.XAudioDevice();
+            var xaudio = new Evergine.XAudio2.XAudioDevice();
             application.Container.RegisterInstance(xaudio);
 
             Stopwatch clockTimer = Stopwatch.StartNew();

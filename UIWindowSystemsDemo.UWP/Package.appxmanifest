@@ -8,14 +8,14 @@
 
   <Identity
     Name="UIWindowSystemsDemo.UWP"
-    Publisher="CN=WaveEngine"
+    Publisher="CN=Evergine"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="88012e9b-36aa-4410-a23b-f8349b9c3972" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>UIWindowSystemsDemo.UWP</DisplayName>
-    <PublisherDisplayName>WaveEngine</PublisherDisplayName>
+    <PublisherDisplayName>Evergine</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

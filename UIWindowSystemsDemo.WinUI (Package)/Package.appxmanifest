@@ -8,7 +8,7 @@
 
   <Identity
     Name="UIWindowSystemsDemo.WinUI"
-    Publisher="CN=WaveEngine"
+    Publisher="CN=Evergine"
     Version="1.0.0.0" />
 
   <Properties>

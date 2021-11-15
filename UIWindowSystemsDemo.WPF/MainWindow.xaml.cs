@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Input;
-using WaveEngine.Common.Graphics;
-using WaveEngine.DirectX11;
-using WaveEngine.Framework.Graphics;
-using WaveEngine.Framework.Services;
-using WaveEngine.WPF;
+using Evergine.Common.Graphics;
+using Evergine.DirectX11;
+using Evergine.Framework.Graphics;
+using Evergine.Framework.Services;
+using Evergine.WPF;
 using Window = System.Windows.Window;
 
 namespace UIWindowSystemsDemo.WPF
@@ -25,10 +25,10 @@ namespace UIWindowSystemsDemo.WPF
         public MainWindow()
         {
             InitializeComponent();
-            LoadWaveEngineControl();
+            LoadEvergineControl();
         }
 
-        private void LoadWaveEngineControl()
+        private void LoadEvergineControl()
         {
             var application = ((App)Application.Current).WaveApplication;
 

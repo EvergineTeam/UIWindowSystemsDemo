@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GenerateWaveContent>True</GenerateWaveContent>
-    <GenerateWaveAssets>False</GenerateWaveAssets>
-    <GenerateWaveScenesCode>True</GenerateWaveScenesCode>
+    <GenerateEvergineContent>True</GenerateEvergineContent>
+    <GenerateEvergineAssets>False</GenerateEvergineAssets>
+    <GenerateEvergineScenesCode>True</GenerateEvergineScenesCode>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WaveEngine.Common" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Components" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Framework" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Mathematics" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Platform" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Bullet" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.Targets" Version="3.3.0.8524-preview" />
-    <PackageReference Include="WaveEngine.CodeScenes" Version="3.3.0.8524-preview" />
+    <PackageReference Include="Evergine.Common" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Components" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Framework" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Mathematics" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Platform" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Bullet" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.Targets" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.CodeScenes" Version="2021.11.12.3-preview" />
   </ItemGroup>
 </Project>
