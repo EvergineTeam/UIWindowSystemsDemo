@@ -132,19 +132,19 @@
       <Version>6.2.10</Version>
     </PackageReference>
     <PackageReference Include="Evergine.DirectX11">
-      <Version>2021.11.12.3-preview</Version>
+      <Version>2021.11.17.2-preview</Version>
     </PackageReference>
     <PackageReference Include="Evergine.Targets">
-      <Version>2021.11.12.3-preview</Version>
+      <Version>2021.11.17.2-preview</Version>
     </PackageReference>
     <PackageReference Include="Evergine.Targets.UWP">
-      <Version>2021.11.12.3-preview</Version>
+      <Version>2021.11.17.2-preview</Version>
     </PackageReference>
     <PackageReference Include="Evergine.UWPView">
-      <Version>2021.11.12.3-preview</Version>
+      <Version>2021.11.17.2-preview</Version>
     </PackageReference>
     <PackageReference Include="Evergine.XAudio2">
-      <Version>2021.11.12.3-preview</Version>
+      <Version>2021.11.17.2-preview</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -6,12 +6,12 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.XAudio2" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.Forms" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.Targets" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.DirectX11" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.XAudio2" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Forms" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Targets" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2021.11.17.2-preview" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />

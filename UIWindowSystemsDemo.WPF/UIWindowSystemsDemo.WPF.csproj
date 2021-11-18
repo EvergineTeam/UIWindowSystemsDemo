@@ -6,12 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.XAudio2" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.WPF" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.Targets" Version="2021.11.12.3-preview" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2021.11.12.3-preview" />
+    <PackageReference Include="Evergine.DirectX11" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.XAudio2" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.WPF" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Targets" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2021.11.17.2-preview" />
     <PackageReference Include="Vortice.Direct3D9" Version="2.1.0-beta2" />
   </ItemGroup>
   <ItemGroup>
