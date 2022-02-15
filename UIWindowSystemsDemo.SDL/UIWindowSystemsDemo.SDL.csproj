@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.Platform" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.DirectX11" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.Vulkan" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.Metal" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.XAudio2" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.OpenAL" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.SDL" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.Targets" Version="2021.11.17.2-preview" />
-    <PackageReference Include="Evergine.Targets.NetCore" Version="2021.11.17.2-preview" />
+    <PackageReference Include="Evergine.Platform" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.DirectX11" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.Vulkan" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.Metal" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.XAudio2" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.OpenAL" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.SDL" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.Targets" Version="2022.2.15.1-nightly" />
+    <PackageReference Include="Evergine.Targets.NetCore" Version="2022.2.15.1-nightly" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
