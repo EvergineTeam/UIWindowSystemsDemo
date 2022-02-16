@@ -2,7 +2,7 @@
 Packages:
   - Id: Evergine.Core
     LocalPath: null
-    Version: 2022.2.15.2-nightly
+    Version: 2022.2.16.1
 Profiles:
   - AdditionalEffectTechniqueCombinations: null
     AlphaCompressionFormat: BC3_UNorm
