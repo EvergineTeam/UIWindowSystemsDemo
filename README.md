@@ -16,6 +16,11 @@ Video: https://www.youtube.com/watch?v=MOgKXaxselg
 
 ![alt SDL sample](Images/SDLSample.png)
 
+## Extended samples
+Some of windows system samples provide additional features.
+- **WPF**: You have the option in _App.xaml_ file to choose between creating a single window with two rendering surfaces, or create two windows, and each one of them with an independent rendering surface.
+- **WinForms**: Changing value of _ShowSingleWindowSample_ you can test a rendering surface for the full window, or have a rendering surface that can be with other native UI elements.
+
 ## Build and Test
 
 Required Visual Studio 2022 with .NET6 support.

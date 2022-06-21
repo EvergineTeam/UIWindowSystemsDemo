@@ -2,6 +2,12 @@
     x:Class="UIWindowSystemsDemo.WPF.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 
+        Comment/uncomment following lines to choose between two behaviors:
+        - MainWindow.xaml: creates a single window with two rendering surfaces.
+        - SeparatedWindows.xaml: creates a window with a single surface, and a second window
+        with a second surface can be opened.
+    -->
     <Application.StartupUri>MainWindow.xaml</Application.StartupUri>
     <!--<Application.StartupUri>SeparatedWindows.xaml</Application.StartupUri>-->
     <Application.Resources />
