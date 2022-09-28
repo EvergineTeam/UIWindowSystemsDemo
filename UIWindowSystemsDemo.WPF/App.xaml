@@ -1,8 +1,8 @@
-<Application x:Class="UIWindowSystemsDemo.WPF.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+<Application
+    x:Class="UIWindowSystemsDemo.WPF.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.StartupUri>MainWindow.xaml</Application.StartupUri>
+    <!--<Application.StartupUri>SeparatedWindows.xaml</Application.StartupUri>-->
+    <Application.Resources />
 </Application>

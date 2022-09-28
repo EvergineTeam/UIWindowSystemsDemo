@@ -1,27 +1,22 @@
+using System.Linq;
 using System.Windows;
-using System.Windows.Input;
 using Window = System.Windows.Window;
 
 namespace UIWindowSystemsDemo.WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SeparatedWindows.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SeparatedWindows : Window
     {
-        private EvergineDisplayHelper displayHelper1;
-        private EvergineDisplayHelper displayHelper2;
+        private readonly EvergineDisplayHelper displayHelper;
         private InteractionService interactionService;
 
-        public MainWindow()
+        public SeparatedWindows()
         {
             InitializeComponent();
-
-            displayHelper1 = new EvergineDisplayHelper(WaveContainer);
-            displayHelper1.Load("DefaultDisplay");
-
-            displayHelper2 = new EvergineDisplayHelper(WaveContainer2);
-            displayHelper2.Load("Display2");
+            displayHelper = new EvergineDisplayHelper(WaveContainer);
+            displayHelper.Load("DefaultDisplay");
 
             RegisterInteractionService();
         }
@@ -33,17 +28,6 @@ namespace UIWindowSystemsDemo.WPF
             application.Container.RegisterInstance(interactionService);
         }
 
-        private void NativeControlMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            ((FrameworkElement)sender).ReleaseMouseCapture();
-        }
-
-        private void NativeControlMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            ((FrameworkElement)sender).Focus();
-            ((FrameworkElement)sender).CaptureMouse();
-        }
-
         private void ResetCameraClick(object sender, RoutedEventArgs e)
         {
             interactionService.ResetCamera();
@@ -52,6 +36,15 @@ namespace UIWindowSystemsDemo.WPF
         private void DisplacementChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             interactionService.Displacement = (float)e.NewValue;
+        }
+
+        private void OpenSecondaryWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (!App.Current.Windows.OfType<SecondaryWindow>().Any())
+            {
+                var window = new SecondaryWindow();
+                window.Show();
+            }
         }
     }
 }

@@ -8,41 +8,41 @@ namespace UIWindowSystemsDemo.WPF
     /// </summary>
     public partial class App : Application
     {
-        public MyApplication WaveApplication { get; private set; }
+        public MyApplication EvergineApplication { get; private set; }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             // Create app
-            WaveApplication = new MyApplication();
+            EvergineApplication = new MyApplication();
 
             // Create Window System
             var windowsSystem = new Evergine.WPF.WPFWindowsSystem(this);
-            WaveApplication.Container.RegisterInstance(windowsSystem);
+            EvergineApplication.Container.RegisterInstance(windowsSystem);
 
             // Create Graphic context
             var graphicsContext = new Evergine.DirectX11.DX11GraphicsContext();
             graphicsContext.CreateDevice();
-            WaveApplication.Container.RegisterInstance(graphicsContext);
+            EvergineApplication.Container.RegisterInstance(graphicsContext);
 
             // Creates XAudio device
             var xaudio = new Evergine.XAudio2.XAudioDevice();
-            WaveApplication.Container.RegisterInstance(xaudio);
+            EvergineApplication.Container.RegisterInstance(xaudio);
 
             Stopwatch clockTimer = Stopwatch.StartNew();
             windowsSystem.Run(
             () =>
             {
-                WaveApplication.Initialize();
+                EvergineApplication.Initialize();
             },
             () =>
             {
                 var gameTime = clockTimer.Elapsed;
                 clockTimer.Restart();
 
-                WaveApplication.UpdateFrame(gameTime);
-                WaveApplication.DrawFrame(gameTime);
+                EvergineApplication.UpdateFrame(gameTime);
+                EvergineApplication.DrawFrame(gameTime);
 
                 graphicsContext.DXDeviceContext.Flush();
             });
