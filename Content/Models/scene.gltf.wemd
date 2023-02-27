@@ -1,5 +1,5 @@
 !Evergine.Assets.Exporters.ModelMetaFile,Evergine.Assets
-Id: a24c3d0f-8797-41de-9f7d-5ce623babed6
+Id: fbf972d8-435f-4fef-a4b8-15985eb15396
 Clips: []
 DefaultProfile:
   ExcludeAsset: false
@@ -11,26 +11,26 @@ GenerateTangentSpace: true
 Profiles: {}
 Source:
   Header:
-    Id: fedb7092-0904-440a-9a2f-2f36a99da75d
+    Id: 8f5edc0b-7a7a-4c51-b384-156ffa7b8baf
     IsCompressed: true
   LastModified: 0001-01-01T00:00:00.0000000
   ModelInfo:
-    Id: 154bdc7e-828f-4d7c-a6eb-4e490ce0e8ad
+    Id: 886b6454-2271-4a7b-8bc3-f3f01d748da5
     AnimationTracks: []
     EmbeddedResources: null
     Materials:
       - Item1: accent-yellow
-        Item2: 3e9ba074-ae29-446f-bdd3-ce9be38dddfc
+        Item2: e9b2b5c2-e48b-4b5b-80ff-0f19c96280a3
       - Item1: metal-bright
-        Item2: 6615de8d-c2a7-4524-862e-bac8776b47f6
+        Item2: 22fe1a38-6f62-4cfc-9fed-ee4660a4536a
       - Item1: metal-dark
-        Item2: e1e260b1-bc1e-41c0-9717-195d850eea85
+        Item2: 91a1069e-669a-4cc2-b4dd-4a76ee651661
       - Item1: metal-mid
-        Item2: a2d10bad-6c5b-417d-a9f4-14b1ef326188
+        Item2: 6c351fe7-5428-453a-a33b-f651ae470e29
       - Item1: plastic-cone-black
-        Item2: 70bd7abe-a4c2-4aff-9b2c-b4dab37e2869
+        Item2: d9a9f4d9-f4fd-46a5-a433-8869f4475242
       - Item1: plastic-grey
-        Item2: 3d8c4228-9147-4bf1-9fcb-3816f5771d17
+        Item2: 4e1e89d7-f07a-475e-ad11-2460207d4b8d
     Nodes:
       - RootNode (gltf orientation matrix)
       - RootNode (gltf orientation matrix).RootNode (model correction matrix)
