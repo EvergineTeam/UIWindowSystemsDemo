@@ -4,13 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.Platform" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.DirectX11" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.XAudio2" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.SDL" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.Targets" Version="2023.9.27.597-nightly" />
-    <PackageReference Include="Evergine.Targets.NetCore" Version="2023.9.27.597-nightly" />
+    <PackageReference Include="Evergine.Platform" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.SDL" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.Targets.NetCore" Version="2023.9.28.510" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />

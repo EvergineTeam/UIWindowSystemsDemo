@@ -1,0 +1,88 @@
+<ContentPage
+    x:Class="UIWindowSystemsDemo.MAUI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:evergine="clr-namespace:UIWindowSystemsDemo.MAUI.Evergine">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MainGridStyle" TargetType="Grid">
+                <Setter Property="RowDefinitions" Value="*" />
+                <Setter Property="ColumnDefinitions" Value="2*,*" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="2*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Landscape">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="RowDefinitions" Value="*" />
+                                    <Setter Property="ColumnDefinitions" Value="2*,*" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style x:Key="EvergineViewStyle1" TargetType="evergine:EvergineView">
+                <Setter Property="Grid.Row" Value="0" />
+                <Setter Property="Grid.Column" Value="0" />
+            </Style>
+            <Style x:Key="ControlsStackStyle" TargetType="StackLayout">
+                <Setter Property="Grid.Row" Value="0" />
+                <Setter Property="Grid.Column" Value="2" />
+                <Setter Property="Orientation" Value="Vertical" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Grid.Row" Value="1" />
+                                    <Setter Property="Grid.Column" Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Landscape">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Grid.Row" Value="0" />
+                                    <Setter Property="Grid.Column" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Style="{StaticResource MainGridStyle}">
+        <evergine:EvergineView x:Name="evergineView1" Style="{StaticResource EvergineViewStyle1}" />
+        <StackLayout Padding="12" Style="{StaticResource ControlsStackStyle}">
+            <Label Margin="0,0,0,12" Text="Evergine MAUI integration sample." />
+            <Label Text="You can move the scene's cameras touching the screen or using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation." />
+            <Button
+                Margin="0,12"
+                Padding="12,3"
+                Clicked="ResetCameraClick"
+                Text="Reset cameras" />
+            <Label Text="Displacement:" />
+            <Slider
+                Maximum="10"
+                Minimum="0"
+                ValueChanged="DisplacementChanged" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
