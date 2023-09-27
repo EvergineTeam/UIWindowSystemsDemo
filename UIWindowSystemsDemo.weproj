@@ -2,7 +2,7 @@
 Packages:
   - Id: Evergine.Core
     LocalPath: null
-    Version: 2023.3.1.1
+    Version: 2023.9.27.597-nightly
 Profiles:
   - AdditionalEffectTechniqueCombinations: null
     AlphaCompressionFormat: BC3_UNorm
