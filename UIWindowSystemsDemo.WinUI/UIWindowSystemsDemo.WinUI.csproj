@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <RootNamespace>UIWindowSystemsDemo.WinUI</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Platforms>x64</Platforms>
-    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
   </PropertyGroup>
   <ItemGroup>
@@ -15,12 +15,12 @@
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.XAudio2" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.WinUI" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Targets" Version="2023.9.28.510" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2023.9.28.510" />
+    <PackageReference Include="Evergine.DirectX11" Version="2024.6.28.10" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2024.6.28.10" />
+    <PackageReference Include="Evergine.XAudio2" Version="2024.6.28.10" />
+    <PackageReference Include="Evergine.WinUI" Version="2024.6.28.10" />
+    <PackageReference Include="Evergine.Targets" Version="2024.6.28.10" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2024.6.28.10" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
