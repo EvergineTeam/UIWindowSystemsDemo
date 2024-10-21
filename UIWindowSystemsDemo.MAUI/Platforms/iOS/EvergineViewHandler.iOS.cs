@@ -2,7 +2,7 @@ using UIWindowSystemsDemo.MAUI.Platforms.iOS;
 using Evergine.Common.Graphics;
 using Evergine.Framework.Graphics;
 using Evergine.Framework.Services;
-using Evergine.IOSView;
+using Evergine.iOS;
 using Microsoft.Maui.Handlers;
 using System.Diagnostics;
 using UIKit;

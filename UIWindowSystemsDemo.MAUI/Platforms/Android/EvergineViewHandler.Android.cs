@@ -1,5 +1,5 @@
 using UIWindowSystemsDemo.MAUI.Evergine;
-using Evergine.AndroidView;
+using Evergine.Android;
 using Evergine.Common.Graphics;
 using Evergine.Framework.Services;
 using Evergine.Vulkan;

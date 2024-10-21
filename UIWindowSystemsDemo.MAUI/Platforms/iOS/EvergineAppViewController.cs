@@ -1,4 +1,4 @@
-using Evergine.IOSView;
+using Evergine.iOS;
 using UIKit;
 
 namespace UIWindowSystemsDemo.MAUI.Platforms.iOS

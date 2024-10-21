@@ -6,8 +6,6 @@ Video: https://www.youtube.com/watch?v=MOgKXaxselg
 
 ![alt WPF sample](Images/WpfSample.png)
 
-![alt UWP sample](Images/UWPSample.png)
-
 ![alt WinUI sample](Images/WinUISample.png)
 
 ![alt MAUI sample](Images/MAUISample.png)
