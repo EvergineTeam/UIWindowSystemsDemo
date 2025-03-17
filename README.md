@@ -30,6 +30,6 @@ Powered by **[Evergine](http://www.evergine.com)**
 
 LET'S CONNECT!
 
-- [Youtube](https://www.youtube.com/channel/UCpA-X92rxM0OuywdVcir9mA)
-- [Twitter](https://twitter.com/EvergineTeam)
-- [News](https://evergine.com/news/)
+- [Youtube](https://www.youtube.com/c/Evergine)
+- [Twitter](https://x.com/EvergineTeam)
+- [Blog](https://evergine.com/news/)
