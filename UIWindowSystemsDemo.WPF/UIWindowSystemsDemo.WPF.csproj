@@ -8,13 +8,13 @@
     <EvergineProjectFilePath>$(SolutionDir)UIWindowSystemsDemo.weproj</EvergineProjectFilePath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2025.3.18.7" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2025.3.18.7" />
-    <PackageReference Include="Evergine.XAudio2" Version="2025.3.18.7" />
-    <PackageReference Include="Evergine.WPF" Version="2025.3.18.7" />
-    <PackageReference Include="Evergine.Targets" Version="2025.3.18.7" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2025.3.18.7" />
-    <PackageReference Include="Vortice.Direct3D9" Version="3.5.0" />
+    <PackageReference Include="Evergine.DirectX11" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.XAudio2" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.WPF" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.Targets" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2025.10.21.8" />
+    <PackageReference Include="Vortice.Direct3D9" Version="3.6.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
