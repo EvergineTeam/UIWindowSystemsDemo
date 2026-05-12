@@ -14,7 +14,7 @@
     <PackageReference Include="Evergine.WPF" Version="2026.5.9.250-nightly" />
     <PackageReference Include="Evergine.Targets" Version="2026.5.9.250-nightly" />
     <PackageReference Include="Evergine.Targets.Windows" Version="2026.5.9.250-nightly" />
-    <PackageReference Include="Vortice.Direct3D9" Version="3.6.2" />
+    <PackageReference Include="Vortice.Direct3D9" Version="3.8.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />

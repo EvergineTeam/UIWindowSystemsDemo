@@ -76,7 +76,6 @@ namespace UIWindowSystemsDemo.WPF
                 Height = texture.Description.Height,
                 Depth = 1,
                 ArraySize = 1,
-                Faces = 1,
                 Flags = TextureFlags.DepthStencil,
                 CpuAccess = ResourceCpuAccess.None,
                 MipLevels = 1,
