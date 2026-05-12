@@ -1,43 +1,59 @@
 using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 
 namespace UIWindowSystemsDemo.Avalonia
 {
-    /// <summary>
-    /// The main application window that hosts the Evergine render control.
-    /// </summary>
     public partial class MainWindow : Window
     {
-        /// <summary>
-        /// The Evergine render control used for rendering within this window.
-        /// </summary>
         private EvergineControl? renderControl;
+        private EvergineControl? renderControl2;
+        private InteractionService? interactionService;
 
-        /// <summary>
-        /// Gets the Evergine render control instance associated with this window.
-        /// </summary>
-        internal EvergineControl? EvergineRenderControl => renderControl;
+        internal bool HasReadyRenderSurface =>
+            (this.renderControl?.IsReady ?? false) || (this.renderControl2?.IsReady ?? false);
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MainWindow"/> class.
-        /// Finds and assigns the <see cref="EvergineControl"/> defined in the AXAML layout.
-        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
 
-            renderControl = this.FindControl<EvergineControl>("RenderControl");
+            this.renderControl = this.FindControl<EvergineControl>("RenderControl");
+            this.renderControl2 = this.FindControl<EvergineControl>("RenderControl2");
+
+            this.RegisterInteractionService();
         }
 
-        /// <summary>
-        /// Called when the window is unloaded. Ensures the Evergine render control
-        /// is properly unloaded to release resources.
-        /// </summary>
-        /// <param name="e">The routed event arguments.</param>
         protected override void OnUnloaded(RoutedEventArgs e)
         {
             base.OnUnloaded(e);
-            renderControl?.Unload();
+            this.renderControl?.Unload();
+            this.renderControl2?.Unload();
+        }
+
+        private void RegisterInteractionService()
+        {
+            var app = (App)global::Avalonia.Application.Current!;
+            var evergineApplication = app.EvergineApplication;
+            if (evergineApplication == null)
+            {
+                return;
+            }
+
+            this.interactionService = new InteractionService();
+            evergineApplication.Container.RegisterInstance(this.interactionService);
+        }
+
+        private void ResetCameraClick(object? sender, RoutedEventArgs e)
+        {
+            this.interactionService?.ResetCamera();
+        }
+
+        private void DisplacementChanged(object? sender, RangeBaseValueChangedEventArgs e)
+        {
+            if (this.interactionService != null)
+            {
+                this.interactionService.Displacement = (float)e.NewValue;
+            }
         }
     }
 }

@@ -79,9 +79,9 @@ namespace UIWindowSystemsDemo.Avalonia
                         var gameTime = clockTimer.Elapsed;
                         clockTimer.Restart();
 
-                        // Guard against rendering before display is ready
+                        // Guard against rendering before any render surface is ready
                         var mainWindow = (MainWindow)desktop.MainWindow;
-                        if (mainWindow.EvergineRenderControl != null && mainWindow.EvergineRenderControl.IsReady)
+                        if (mainWindow.HasReadyRenderSurface)
                         {
                             EvergineApplication.UpdateFrame(gameTime);
                             EvergineApplication.DrawFrame(gameTime);

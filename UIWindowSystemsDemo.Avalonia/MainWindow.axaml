@@ -3,16 +3,49 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UIWindowSystemsDemo.Avalonia"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="UIWindowSystemsDemo.Avalonia.MainWindow"
-        Title="UIWindowSystemsDemo.Avalonia"
+        Title="Evergine Avalonia sample"
         Width="1280"
-        Height="720">
-    <Border Grid.Row="0" 
-                Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
-                ClipToBounds="True">
-          <!-- Evergine Rendering Surface -->
-            <local:EvergineControl x:Name="RenderControl"
-                                   DisplayTag="DefaultDisplay"/>
-        </Border>
+        Height="720"
+        d:DesignWidth="1280"
+        d:DesignHeight="720"
+        mc:Ignorable="d">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="300" />
+    </Grid.ColumnDefinitions>
+
+    <Border Grid.Column="0"
+            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+            ClipToBounds="True">
+      <local:EvergineControl x:Name="RenderControl"
+                             DisplayTag="DefaultDisplay" />
+    </Border>
+
+    <Border Grid.Column="1"
+            Background="{DynamicResource SystemControlBackgroundChromeMediumBrush}"
+            ClipToBounds="True">
+      <local:EvergineControl x:Name="RenderControl2"
+                             DisplayTag="Display2" />
+    </Border>
+
+    <StackPanel Grid.Column="2"
+                Margin="12"
+                Spacing="12">
+      <TextBlock FontWeight="Bold"
+                 Text="Evergine Avalonia integration sample." />
+      <TextBlock Text="You can move the scene's cameras using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation."
+                 TextWrapping="Wrap" />
+      <Button HorizontalAlignment="Left"
+              Click="ResetCameraClick"
+              Content="Reset cameras"
+              Padding="12,3" />
+      <TextBlock Text="Displacement:" />
+      <Slider Minimum="0"
+              Maximum="10"
+              ValueChanged="DisplacementChanged" />
+    </StackPanel>
+  </Grid>
 </Window>
