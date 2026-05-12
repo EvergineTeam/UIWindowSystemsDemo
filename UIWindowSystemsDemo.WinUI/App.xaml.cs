@@ -1,3 +1,5 @@
+using Evergine.Common.Graphics;
+using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -15,6 +17,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Graphics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -44,8 +47,14 @@ namespace UIWindowSystemsDemo.WinUI
         {
             m_window = new MainWindow();
             m_window.Activate();
+
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(m_window);
+            var windowId = Win32Interop.GetWindowIdFromWindow(hwnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+
+            appWindow.Resize(new SizeInt32(1280, 720));
         }
 
-        private Window m_window;
+        private Microsoft.UI.Xaml.Window m_window;
     }
 }

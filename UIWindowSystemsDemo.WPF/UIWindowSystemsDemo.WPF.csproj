@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <!-- Evergine -->
     <EvergineAssetContent>$(SolutionDir)Content</EvergineAssetContent>
     <EvergineProjectFilePath>$(SolutionDir)UIWindowSystemsDemo.weproj</EvergineProjectFilePath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2025.10.21.8" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2025.10.21.8" />
-    <PackageReference Include="Evergine.XAudio2" Version="2025.10.21.8" />
-    <PackageReference Include="Evergine.WPF" Version="2025.10.21.8" />
-    <PackageReference Include="Evergine.Targets" Version="2025.10.21.8" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2025.10.21.8" />
+    <PackageReference Include="Evergine.DirectX11" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.XAudio2" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.WPF" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.Targets" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2026.5.9.250-nightly" />
     <PackageReference Include="Vortice.Direct3D9" Version="3.6.2" />
   </ItemGroup>
   <ItemGroup>
