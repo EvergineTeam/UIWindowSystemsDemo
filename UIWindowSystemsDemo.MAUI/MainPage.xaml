@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <Style x:Key="MainGridStyle" TargetType="Grid">
                 <Setter Property="RowDefinitions" Value="*" />
-                <Setter Property="ColumnDefinitions" Value="2*,*" />
+                <Setter Property="ColumnDefinitions" Value="*,*,300" />
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup>
@@ -16,7 +16,7 @@
                                     <OrientationStateTrigger Orientation="Portrait" />
                                 </VisualState.StateTriggers>
                                 <VisualState.Setters>
-                                    <Setter Property="RowDefinitions" Value="2*,*" />
+                                    <Setter Property="RowDefinitions" Value="*,*,Auto" />
                                     <Setter Property="ColumnDefinitions" Value="*" />
                                 </VisualState.Setters>
                             </VisualState>
@@ -26,21 +26,22 @@
                                 </VisualState.StateTriggers>
                                 <VisualState.Setters>
                                     <Setter Property="RowDefinitions" Value="*" />
-                                    <Setter Property="ColumnDefinitions" Value="2*,*" />
+                                    <Setter Property="ColumnDefinitions" Value="*,*,300" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+
             <Style x:Key="EvergineViewStyle1" TargetType="evergine:EvergineView">
                 <Setter Property="Grid.Row" Value="0" />
                 <Setter Property="Grid.Column" Value="0" />
             </Style>
-            <Style x:Key="ControlsStackStyle" TargetType="StackLayout">
+
+            <Style x:Key="EvergineViewStyle2" TargetType="evergine:EvergineView">
                 <Setter Property="Grid.Row" Value="0" />
-                <Setter Property="Grid.Column" Value="2" />
-                <Setter Property="Orientation" Value="Vertical" />
+                <Setter Property="Grid.Column" Value="1" />
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup>
@@ -66,12 +67,45 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+
+            <Style x:Key="ControlsStackStyle" TargetType="VerticalStackLayout">
+                <Setter Property="Grid.Row" Value="0" />
+                <Setter Property="Grid.Column" Value="2" />
+                <Setter Property="Spacing" Value="12" />
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Portrait">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Portrait" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Grid.Row" Value="2" />
+                                    <Setter Property="Grid.Column" Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Landscape">
+                                <VisualState.StateTriggers>
+                                    <OrientationStateTrigger Orientation="Landscape" />
+                                </VisualState.StateTriggers>
+                                <VisualState.Setters>
+                                    <Setter Property="Grid.Row" Value="0" />
+                                    <Setter Property="Grid.Column" Value="2" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <Grid Style="{StaticResource MainGridStyle}">
         <evergine:EvergineView x:Name="evergineView1" Style="{StaticResource EvergineViewStyle1}" />
-        <StackLayout Padding="12" Style="{StaticResource ControlsStackStyle}">
-            <Label Margin="0,0,0,12" Text="Evergine MAUI integration sample." />
+        <evergine:EvergineView x:Name="evergineView2" Style="{StaticResource EvergineViewStyle2}" />
+
+        <VerticalStackLayout Padding="12" Style="{StaticResource ControlsStackStyle}">
+            <Label Text="Evergine MAUI integration sample." />
             <Label Text="You can move the scene's cameras touching the screen or using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation." />
             <Button
                 Margin="0,12"
@@ -83,6 +117,6 @@
                 Maximum="10"
                 Minimum="0"
                 ValueChanged="DisplacementChanged" />
-        </StackLayout>
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>

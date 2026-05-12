@@ -14,6 +14,8 @@ namespace UIWindowSystemsDemo.MAUI
             this.evergineApplication = new MyApplication();
             this.evergineView1.DisplayName = "DefaultDisplay";
             this.evergineView1.Application = this.evergineApplication;
+            this.evergineView2.DisplayName = "Display2";
+            this.evergineView2.Application = this.evergineApplication;
 
             RegisterInteractionService();
         }
