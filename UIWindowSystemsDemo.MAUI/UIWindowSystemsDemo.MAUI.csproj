@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>net10.0-android;net10.0-ios</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
     <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
     <!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
     <OutputType>Exe</OutputType>
@@ -47,7 +47,7 @@
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
   </ItemGroup>
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <When Condition="'$(TargetFramework)' == 'net10.0-android'">
       <PropertyGroup>
         <EvergineProfileName>#MAUI#Android</EvergineProfileName>
       </PropertyGroup>
@@ -64,7 +64,7 @@
         <TrimmerRootDescriptor Include="Platforms\Android\linker.xml" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <When Condition="'$(TargetFramework)' == 'net10.0-ios'">
       <PropertyGroup>
         <EvergineProfileName>#MAUI#iOS</EvergineProfileName>
         <!--
@@ -83,7 +83,7 @@
         <PackageReference Include="Evergine.Targets.iOS" Version="2026.5.9.250-nightly" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net8.0-windows10.0.19041.0'">
+    <When Condition="'$(TargetFramework)' == 'net10.0-windows10.0.19041.0'">
       <PropertyGroup>
         <EvergineProfileName>#MAUI#Windows</EvergineProfileName>
       </PropertyGroup>

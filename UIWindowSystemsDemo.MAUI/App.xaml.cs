@@ -5,8 +5,15 @@ namespace UIWindowSystemsDemo.MAUI
         public App()
         {
             InitializeComponent();
+        }
 
-            MainPage = new AppShell();
+        protected override Window CreateWindow(IActivationState activationState)
+        {
+            return new Window(new AppShell())
+            {
+                Width = 1280,
+                Height = 720,
+            };
         }
     }
 }
