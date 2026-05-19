@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
@@ -14,13 +14,13 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
     <!-- Evergine graphics backends (Windows implementation) -->
-    <PackageReference Include="Evergine.DirectX11" Version="2026.5.9.250-nightly" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2026.5.9.250-nightly" />
-    <PackageReference Include="Evergine.Avalonia" Version="2026.5.9.250-nightly" />
-    <PackageReference Include="Evergine.Targets" Version="2026.5.9.250-nightly" />
-    <PackageReference Include="Evergine.Targets.Avalonia" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.DirectX11" Version="2026.5.19.266-nightly" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2026.5.19.266-nightly" />
+    <PackageReference Include="Evergine.Avalonia" Version="2026.5.19.266-nightly" />
+    <PackageReference Include="Evergine.Targets" Version="2026.5.19.266-nightly" />
+    <PackageReference Include="Evergine.Targets.Avalonia" Version="2026.5.19.266-nightly" />
     <!-- Evergine audio backend (Windows implementation) -->
-    <PackageReference Include="Evergine.XAudio2" Version="2026.5.9.250-nightly" />
+    <PackageReference Include="Evergine.XAudio2" Version="2026.5.19.266-nightly" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)">
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
