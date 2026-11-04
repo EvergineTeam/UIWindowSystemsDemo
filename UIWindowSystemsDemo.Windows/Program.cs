@@ -82,7 +82,7 @@ namespace UIWindowSystemsDemo.Windows
 
         private static void ConfigureGraphicsContext(Application application, Surface surface)
         {
-            GraphicsContext graphicsContext = new Evergine.DirectX11.DX11GraphicsContext();
+            GraphicsContext graphicsContext = new Evergine.DirectX12.DX12GraphicsContext();
             graphicsContext.CreateDevice();
             SwapChainDescription swapChainDescription = new SwapChainDescription()
             {

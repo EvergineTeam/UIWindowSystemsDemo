@@ -10,17 +10,17 @@
     <UseWinUI>true</UseWinUI>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260317003" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.4654" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Evergine.DirectX11" Version="2026.5.26.8" />
-    <PackageReference Include="Evergine.HLSLEverywhere" Version="2026.5.26.8" />
-    <PackageReference Include="Evergine.XAudio2" Version="2026.5.26.8" />
-    <PackageReference Include="Evergine.WinUI" Version="2026.5.26.8" />
-    <PackageReference Include="Evergine.Targets" Version="2026.5.26.8" />
-    <PackageReference Include="Evergine.Targets.Windows" Version="2026.5.26.8" />
+    <PackageReference Include="Evergine.DirectX11" Version="2026.11.4.444-nightly" />
+    <PackageReference Include="Evergine.HLSLEverywhere" Version="2026.11.4.444-nightly" />
+    <PackageReference Include="Evergine.XAudio2" Version="2026.11.4.444-nightly" />
+    <PackageReference Include="Evergine.WinUI" Version="2026.11.4.444-nightly" />
+    <PackageReference Include="Evergine.Targets" Version="2026.11.4.444-nightly" />
+    <PackageReference Include="Evergine.Targets.Windows" Version="2026.11.4.444-nightly" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UIWindowSystemsDemo\UIWindowSystemsDemo.csproj" />
