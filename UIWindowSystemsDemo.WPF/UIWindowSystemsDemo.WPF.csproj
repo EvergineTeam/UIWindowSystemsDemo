@@ -4,8 +4,8 @@
     <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <!-- Evergine -->
-    <EvergineAssetContent>$(SolutionDir)Content</EvergineAssetContent>
-    <EvergineProjectFilePath>$(SolutionDir)UIWindowSystemsDemo.weproj</EvergineProjectFilePath>
+    <EvergineAssetContent>$(MSBuildThisFileDirectory)..\Content</EvergineAssetContent>
+    <EvergineProjectFilePath>$(MSBuildThisFileDirectory)..\UIWindowSystemsDemo.weproj</EvergineProjectFilePath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Evergine.DirectX11" Version="2026.11.5.670-nightly" />

@@ -24,6 +24,7 @@ namespace UIWindowSystemsDemo.WinUI
         public MainWindow()
         {
             this.InitializeComponent();
+            this.Title = "Evergine WinUI sample";
             SwapChainPanel.Loaded += OnSwapChainPanelLoaded;
         }
 

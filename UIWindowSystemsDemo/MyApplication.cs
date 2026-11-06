@@ -9,6 +9,7 @@ namespace UIWindowSystemsDemo
     {
         public MyApplication()
         {
+            this.Container.Register<Settings>();
             this.Container.Register<Clock>();
             this.Container.Register<TimerFactory>();
             this.Container.Register<Random>();
@@ -18,6 +19,7 @@ namespace UIWindowSystemsDemo
             this.Container.Register<AssetsDirectory>();
             this.Container.Register<AssetsService>();
             this.Container.Register<ForegroundTaskSchedulerService>();
+            this.Container.Register<WorkActionScheduler>();
         }
 
         public override void Initialize()

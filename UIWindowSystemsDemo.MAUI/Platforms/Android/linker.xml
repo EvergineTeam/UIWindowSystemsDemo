@@ -32,7 +32,7 @@
     <type fullname="Evergine.Framework.Assets.Importers.EvergineReflectionProbeImporter" />
 
     <type fullname="Evergine.Framework.Drawable">
-      <property signature="Evergine.Framework.Managers.RenderManager RenderManager" accessors="set" />
+      <property signature="Evergine.Framework.Managers.BaseRenderManager RenderManager" accessors="set" />
     </type>
 
     <type fullname="Evergine.Framework.BindComponent" />
